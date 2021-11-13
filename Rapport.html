@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)http://www-ens.iro.umontreal.ca/~lafontle/ift2255/template.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+</style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFT2255 | Rapport DM1</title>
+    <link rel="shortcut icon" href="http://www-ens.iro.umontreal.ca/~lafontle/ift2255/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./IFT2255 _ Rapport DM1_files/normalize.css">
+    <link rel="stylesheet" href="./IFT2255 _ Rapport DM1_files/base.css">
+    <style>
+        .report-header {
+            padding-top: 24px; padding-bottom: 24px;
+            background-color: #fff;
+        }
+
+        .title-section {
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+        .report-title {
+            color: royalblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .report-summary {
+            max-width: 800px;
+            font-size: 1.4em;
+            color: #555;
+        }
+        
+        .section-title {
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            font-size: 2.4em; font-weight: 300;
+        }
+
+        .team-section {
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+
+            .team-title {
+                font-weight: 500;
+                margin-bottom: 12px;
+                color: #1C3A94;
+            }
+
+            .members {
+                display: flex; flex-direction: row;
+            }
+
+            .member {
+                display: flex; flex-direction: column;
+            }
+                .member:not(:last-child) {
+                    margin-right: 12px;
+                }
+
+                .member-pic {
+                    display: block;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                }
+
+                .member-role {
+                    font-size: 0.9em; font-weight: 500;
+                    color: #555;
+                }
+
+        .report-body {
+            display: flex;
+        }
+
+        .report-aside {
+            padding-top: 24px;
+            padding-right: 12px;
+            padding-left: 5vw;
+            box-shadow: 1px 0 1px #999;
+        }
+
+        .report-main {
+            padding-left: 12px;
+            padding-right: 5vw;
+            padding-top: 24px;
+        }
+
+        .nav {
+            color: #E87429;
+        }
+
+        .nav-item__link {
+            display: block;
+            padding: 6px;
+            text-decoration: none;
+        }
+
+        .glossary {
+            font-size: 1.4em;
+        }
+
+        .preview-img {
+            width: 600px;
+            height: 400px;
+        }
+
+        .report-footer {
+            background-color: #2C5EB4;
+            padding: 12px 5vw 24px;
+        }
+
+        .report-footer p {
+            margin: 0;
+        }
+
+        .report-footer__link {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1032.0" data-gr-ext-installed="">
+    <header class="report-header">
+        <div class="title-section">
+            <h1 class="report-title">VaxTodo:re</h1>
+            <p class="report-summary">
+                Ce livrable se concentre sur un système d'information VaxTodo:re qui sera manipulé uniquement par les employés au sein d'une campagne de vaccination. 
+                Le present livrable sert à faire le tour du projet en presentant un glossaire, un echeancier ainsi qu'une analyse des risques et exigences du projet en question.
+            </p>
+        </div>
+
+        <div class="team-section">
+            <h2 class="team-title">Groupe UDEM</h2>
+            <ul class="bare-list members">
+                <li class="member">
+                    <img class="member-pic" src="Profil/Oliver Profil.jpg" alt="">
+                    <div class="member-identification">
+                        <span class="member-name">Oliver Khayat</span>
+                        <span class="member-id">20160176</span>
+                    </div> 
+                    <a href="mailto:prenom.nom@umontreal.ca">oliver.khayat@umontreal.ca</a>
+                    <span class="member-role">Chargé de projet/coordinateur</span>
+                </li>
+                <li class="member">
+                    <img class="member-pic" src="Profil/Soukaina.PNG" alt="">
+                    <div class="member-identification">
+                        <span class="member-name">Soukaina Benabid</span>
+                        <span class="member-id">20148642</span>
+                    </div> 
+                    <a href="mailto:prenom.nom@umontreal.ca">soukaina.benabid@umontreal.ca</a>
+                    <span class="member-role">Chargé du processus de développement de l'interface</span>
+                </li>
+                <li class="member">
+                    <img class="member-pic" src="http://www-ens.iro.umontreal.ca/~lafontle/ift2255/template.html" alt="">
+                    <div class="member-identification">
+                        <span class="member-name">Mher Slimane</span>
+                        <span class="member-id">1246973</span>
+                    </div> 
+                    <a href="mailto:prenom.nom@umontreal.ca">mher.slimane@umontreal.ca</a>
+                    <span class="member-role">Chargé de...</span>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main class="report-body">
+        <aside class="report-aside">
+            <nav>
+                <ul class="bare-list nav">
+                    <li class="nav-item">
+                        <a href="plannification.html">Plannification</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a href="Comprehension_du_Domaine.html">Comprehension du Domaine</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a href="Modelisation_du_Domaine.html">Modelisation du Domaine</a> 
+                    </li>
+                    <li class="nav-item">
+                         <a href="Analyse.html">Analyse</a>  
+                    </li>
+                    <li class="nav-item">
+                         <a href="Prototype.html">Prototype</a>  
+                    </li>
+                    <li class="nav-item">
+                         <a href="Annexe.html">Annexe</a>  
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="report-main">
+            <section>
+                <h2 id="plan" class="section-title">Plannification</h2>
+                <p><b>Description brève du domaine et du problème : </b><br>
+              Contexte : Systeme opere dans un environnement lié au domaune de ka santé, vaccination massive en reponse a une pandemie. Le systeme sera manipulés par 2 entités (benevole et employé) dans un contexte medicale. </p>
+              <p><b>-	Probleme a resoudre :Le systeme est accessible aux benevoles et employés, chacun avec un different niveau d’accessibilité. Il doit etre capable de gerer les rendez-vous (visite planifies ou spontannee), creer un rendez-vous, les modifier (si le visiteur se presente en retard). Il permet aussi de collecter 
+des informations des visiteurs et celles liés au vaccin admnisitré. Enfin, le systeme devrait aussi 
+etre capable de faire un suivi, envoyer une preuve de vaccination avec code QR valide ou bien envoyer
+un rappel de rdv aux visiteurs, selon la situation.</b></p> 
+              <p><b>Portee : systeme utilisable en domaine medicale uniquement. 
+Exclusivement axe autour de  deux utilisateurs principaux (non accesible au public).
+On ne gere pas non plus les professionels de la sante.</b></p>
+              <p><b>-	Nous avons jugé necessaire de donner la priorité a la section de prise 
+de rendez-vous pour eviter tout ecombrement à venir, On s’assure que le systeme 
+opere correctement a cette phase là du processus, notons les bonnes informations 
+du visiteur ainsi que tout ce qui est lié au vaccin quon choisit de lui administre, 
+tout en veillant à ce que notre systeme puisse correctement 
+envoyer un rappel 72h avant le jour J, evitant ainsi que le systeme bug lors des prochaines etapes (accueil du visiteur,…)</b></p>
+              <p><b>Echange avec client : Questions envoyees et reponses:
+                </b></p>
+              
+              <p><b>Présentation de l'échéancier et la distribution des taches</b><ul>
+                <li>Semaine 1 :
+Première lecture du projet individuel suivi d’une rencontre de toute l’équipe pour une activité de réflexion “ brainstorming ‘’ sur le projet.</li>
+<li>Semaine 2 : 
+Établir les hypothèses liées aux exigences fonctionnelles et non fonctionnelles du système. Conception du glossaire liée au projet.</li>
+<li>Semaine 3 :
+Modélisation du domaine avec les cas d’utilisation et les scénarios de notre système. L’analyse des risques liées à l’application. Esquisse du premier prototype avec leur description.  (3 photos) . Livraison du livrable.</li>
+<li> Semaine 4 : Rencontre avec le client pour discuter du livrable.</li>
+<li>Semaine 5 : Début de la conception création du prototype intéractif.</li>
+<li>Semaine 6: Implémentation concrète du répertoire de compte , création de compte pour les patients. </li>
+<li>Semaine 7 : Codage du calendrier et le système de rendez-vous et de suivi.</li>
+<li>Semaine 8 : Début de la phase de test et finalisation du code.</li>
+<li>Semaine 9: Continuation des test.</li>
+<li>Semaine 10 : Présentation du projet final et implémentation réel.</li>
+</ul></p>
+                <p><b>Présentation des hypothèses</b>
+                <ul><li>Notre système doit être capable de faire la prise de rendez-vous tout en vérifiant l’éligibilité de chaque patient pour la vaccination.</li>
+                <li>La création de compte lors de la première visite et les informations liées au compte devront être communiqué aux visiteurs pour les prochaines visites.</li>
+                <li>L’application devrait être capable de gérer la création de compte pour les patients, les employés et les bénévoles.</li>
+                <li>Le compte de chaque patient devrait afficher l’information liées à la santé du patient (problèmes antérieurs) et s’il s’agit de sa première ou deuxième dose. De plus, il serait idéal de savoir si le patient a eu la COVID19 préalablement pour voir s’il prend une ou deux doses.</li>
+                <li> Un patient ayant eux la COVID19 devrait recevoir une dose uniquement.</li>
+                <li>La prise de rendez-vous se fait pour une heure spécifique et s’il y a de la place additionnelle ou une annulation les bénévoles pourront accepter une personne sans rendez-vous. Donc, on assume que les bénévoles sont informés des modifications de l’horaire.</li>
+                <li>Le professionnel de la santé qui vaccine le patient devrait être capable d’enregistrer l’heure, la date, le lieu de vaccination et le vaccin administrer dans le profil du patient qu’il accède à partir d’un code. </li>
+                <li>Le patient pourrait prendre un rendez-vous pour sa deuxième dose avec un bénévole après sa première visite dans un délai minimum de 1 mois. </li>
+                <li>Un patient qui souhaite faire sa vaccination doit absolument avoir sa carte d'assurance maladie. </li>
+                <li>Le système devrait refuser les patients en bas d'un certain âge(selon les contraintes de la santé publique).</li>
+                <li> On assume que la clinique est fermé les fins de semaines.</li>
+                <li>Le systeme doit etre capable de stocker les informations entrés pour les prochaines consultations.</li>
+                <li>Le systeme fournit des plages horraires fiables, tout rendez-vous en retard de plus de 15mins doit 
+                  etre annule et libere donc de la place pour une nouvelle reservation.</li>
+                <li>Les benevoles peuvent acceder au calendrier, mis a jour, ainsi qu'a la liste des visiteurs en temps réel.</li>
+                </ul></p>
+            </section>
+
+            <section>
+                <h2 id="domain" class="section-title">Compréhension du domaine</h2>
+                <p>
+                    Après de nombreuses rencontres et une familiarisation avec l'activité VaxTodo, nous avons préparé un glossaire 
+                    rassemblant les termes et expressions clés caractérisant l'environnement.
+                </p>
+                <h3>Glossaire</h3>
+                <dl class="glossary">
+                    <dt class="glossary-term">Visite planifiée</dt>
+                    <dd class="glossary-def">Le fait de se présenter au local en ayant déjà réservé un rendez-vous pour se faire injecter.</dd>
+                    <dt class="glossary-term">Visite spontanée </dt>
+                    <dd class="glossary-def">Le fait de venir au local sans avoir préalablement reservé pour se faire injecter.</dd>
+                    <dt class="glossary-term">Bénévole</dt></dd>
+                    <dd class="glossary-def">Personne responsable de l’accueil des clients (personnes à se faire vacciner), vérifier le type de visite (spontanée ou planifiée) et les acheminer aux employés.
+</dd>
+                    <dt class="glossary-term">Employé</dt>
+                    <dd class="glossary-def">Personne responsable du traitement du dossier et le choix du vaccin avec la personne à injecter.
+</dd>
+                    <dt class="glossary-term">Visiteur</dt>
+                    <dd class="glossary-def">Personne venant pour récupérer son vaccin (1ere ou 2e dose)</dd>
+                    <dt class="glossary-term">Informations personnelles</dt>
+                    <dd class="glossary-def">Noms, prénoms, heure de rendez-vous et type de vaccins.</dd>
+                    <dt class="glossary-term">Questionnaire papier</dt>
+                    <dd class="glossary-def">Formulaire contenant les informations nécessaire pour
+                        le dossier des visiteurs, (Noms, prénoms, date de naissance, 
+                        numero carte assurance maladie, date de la visite, antécédent covid, 
+                        symptômes, allergies, choix du vaccin)</dd>
+                    <dt class="glossary-term">Billet numéroté</dt>
+                    <dd class="glossary-def">Un papier avec numero servant d’organiser la file d’attente et les traitement des vaccins. </dd>
+              <dt class="glossary-term">Numero de reservation</dt>
+                    <dd class="glossary-def">Numero unique associé a chaque visiteur.</dd>
+              <dt class="glossary-term">Numero de reservation</dt>
+                    <dd class="glossary-def">Numero à 6 chiffres servant a identifier les rendez-vous de chaque visiteur.</dd>
+              <dt class="glossary-term">Numero de compte</dt>
+                    <dd class="glossary-def">Numero à 12 chiffres crée par l’employé et qui est attaché à toutes les activités du visiteur sur notre systeme. 
+              Il est contenu dans lemail de confirmation qu’un employé envoi au visiteur.
+ </dd>
+              <dt class="glossary-term">Preuve de vaccination</dt>
+                    <dd class="glossary-def">Document officiel PDF contenant toites les informations liés a la vaccination du visiteur. Il contient aussi un code QR que le visiteur peut presenter quand demandé.</dd>
+              <dt class="glossary-term">Code QR</dt>
+                    <dd class="glossary-def">Code digitale contenant la preuve de vaccination. </dd>
+              <dt class="glossary-term">Plage horraire</dt>
+                    <dd class="glossary-def">Heures disponibles que le systeme presnte aux visiteurs pour se faire injecter.</dd>
+                </dl>
+            </section>
+
+            <section>
+                <h2 id="model" class="section-title">Modélisation du domaine</h2>
+                <p>Cas d'utilisation</p>
+                <a href="http://www-ens.iro.umontreal.ca/~lafontle/ift2255/lien-vers-fichier.vpp">
+                    <img src="Diagramme/Cas d'utilisation.png" alt="">
+                </a>
+
+                <p>Scénarios</p>
+                <p>Scénario principale : 
+                        <li>Le client se présente au centre de vaccination. </li>
+                        <li>Le bénévole vérifie qu’il a bien un rendez-vous.</li>
+                        <li>Un employé confirme le rendez-vous avec avec le numero de reservation et confirme son rendez-vous</li>
+                        <li>Il récupère ses informations personnelles et confirme le type de vaccin, selon que ce soit une premiere ou deuxieme dose.</li>
+                        <li>L’employé vérifie que la carte d’assurance maladie est valide et remplit le questionnaire papier. </li>
+                        <li>l’employé prend un 2e rendez-vous pour la deuxième dose si le visiteur se présente pour sa première et qu’il n’a pas contracté la COVID-19 avant,tout en s’assurant que ce rendez-vous soit dans un delai d’au moins un mois.
+</li>
+                        <li>l’employé envoie un courriel contenant la preuve de vaccination si le visiteur s’est presenté pour la deuxieme dose. </li>
+                </p>
+                <p>Scénario alternatifs : 
+                    <li>2.a. Le visiteur n’a pas de rendez-vous.</li>
+                    <li>2.a.1. Le client a un retard de plus de 15minutes de son rendez-vous d’origine. </li>
+                    <li>2.a.2.Le benevole consulte le calendrier et lui prend la prochaine disponibilité.</li>
+                    <li>3.a. Le visiteur n’a pas de carte d’assurance maladie valide.</li>
+                    <li>3.a.1 Un employé lui trouve une autre plage horaire pour se faire injecter.</li>
+                    <li>6.a. Si le visiteur vient initialement pour la 2e dose, il ne sera pas assigné 
+                        à un prochain rendez-vous. L’employé devrait uniquement lui fournir son reçu de vaccination.</li>
+                  <li>6.a.2 Le visiteur vient pour la 2e dose mais le delai dun mois nest pas respecte, ce dernier se presente plutot il sera assigne a un autre rendez-vous a la date convenue.</li>
+                  <li>6.a.3 Le visiteur a entre la mauvaise adrese mail (erreur de frappe par exemple), il ne sera pas donc capable de recevoir un rappel pour son 2e rendez-vous ou bien il n’aura meme pas en sa possesion le numero de compte, donc on ne pourra pas acceder a sa requete.</li>
+               
+                </p>
+                    
+            </section>
+
+            <section>
+                <h2 id="analysis" class="section-title">Analyse</h2>
+                <p>Notre analyse préliminaire nous a permet de définir les risques et exigences non-fonctionnelles suivants : </p>
+                <div>
+                    <h3>Risques</h3>
+                    <ol class="risks">
+                        <li>Le système pourrait se mêler si deux personnes différentes avec 
+                            le même nom se présente pour des rendez-vous. Si l’une des deux 
+                            n’a pas de rendez-vous, le système ne serait pas en mesure de savoir 
+                            exactement laquelle, les retards aussi risquent d’être mal geré en conséquence.</li>
+                        <li>Les benevoles acheminent les visiteurs aux employés, il se peut que ces derniers ne respectent pas la contrainte de 40 personne.</li>
+                        <li>Le nom du visiteur sans rendez-vous est ajouté à la prochaine plage horaire disponible, il se pourrait que cette derniere soit complète, le systeme ne pourrait donc pas alerter la personne en charge.</li>
+                      <li>Le systeme ne detecterait pas une erreur de frappe dans l’adresse courriel du visiteur. Comme l’option de message text sur le cellulaire n’est pas forcement disponible pour la confirmation de rendez-vous, il se pourrait qu’on ne soit pas capable de bien faire le suivi.</li>
+                      <li>Le systeme a besoin de temps pour se mettre a jour et comme les benevoles ont acces au calendrier, il se pourrait qu’on ait plus de places disponibles que ce qui est indiqué. On pourrait alors ne pas operer a notre plein potentiel chaque jour de maniere efficiente, ceci represente un risque du systeme a considerer.</li>
+          
+                    </ol>
+                </div>
+                <div>
+                    <h3>Exigences non-fonctionnelles</h3>
+                    <ul class="nf-requirements">
+                        <li>Notre plateforme doit bien fonctionner, 99% du temps.</li>
+                        <li>La vérification de la validité des cartes d’assurance maladie doit permettre de détecter les fraudes et contrefaçons 99.99%.
+</li>
+                        <li>Le système doit être capable de calculer les disponibilités exactes en temps réel, respectant la contrainte d’au plus 40 visiteurs.</li>
+                        <li>Le système doit être capable de sécuriser l’accès aux données personnelles des visiteurs.</li>
+                        <li>Le système doit être capable d’empêcher la prise de rendez-vous pour une même plage horaire au-delà de 15 rendez-vous.</li>
+                      <li>Le système doit être capable de sécuriser l’accès aux données personnelles des visiteurs.</li>
+                      <li>Le système doit être capable d’empêcher la prise de rendez-vous pour une même plage horaire au-delà de 15 rendez-vous.</li>
+                      <li>Le systeme doit etre capable de memoriser les informations personnelles ainsi que celles liées aux lots de vaccins sans confusion. Le disque dur doit avoir suffisemment d’espace pour enregistrer un grand nombre d’informations.</li>
+                      <li>Le choix de stockage de donnes doit etre le plus optimale possible. Tables et tableaux optimisés.</li>
+                      <li>Nos equipements doivent etre fiables et non defectueux, ils doivent permettre a notre systeme d’operer correctement 99,9% du temps.</li>
+                      <li>Le systeme doit avoir un mode d’interaction intuitif, facile à utiliser.</li>
+                      <li>Le systeme doit etre capable de generer un numero de reservation ainsi qu’un numero de compte uniques à chaque visiteur, meme dans le cas que certaines des informations personnelles soit similaire (nom ou prenom ou date de naissance).</li>
+                      <li>•	Le systeme doit etre capable de bien filtrer les acces dependemment de qui ce connecte. Les benevoles ne peuvent pas avoir acces au contenu des employés.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 id="prototype" class="section-title">Prototype</h2>
+                <ul class="bare-list previews">
+                    <li class="preview">
+                        <img class="preview-img" src="Prototypes/Prototype 1.png" alt=""><br>
+                        Ce prototype représente l'interface du login. L'employé est le client dans ce cas. Il a le choix de ce connecter à un utilisateur qui à déjà un compte en entrant son numéro
+                        d'assurance maladie et son numéro de compte (créer lors de la première visite). Il peut aussi enregistrer un nouveau patient s'il s'agit de sa première visite.
+                        Le professionnel de la santé peut nous contacter en cas de problème de compte ou il peut cliquer sur ''perte de numéro de compte'' si le patient l'a oublié.
+                        Finalement , une variété d'option s'offre à lui en haut de page . 
+                    </li>
+                    <li class="preview">
+                        <img class="preview-img" src="Prototypes/Prototype 2.png" alt="">
+                        <br>
+                        Ce prototype représente la première interface du calendrier. L'interface du calendrier affiche chaque jour de la semaine et pour chaque jour il y a les plage horaire d'une heure.
+                        Chaque plage horaire est un bouton qui est pressable. Lorsque ce bouton est pressé le système nous amène vers une autre interface qui affiche les 15 patients (au maximum) de 
+                        l'heure en question.
+                    </li>
+                    <li class="preview">
+                        <img class="preview-img" src="Prototypes/Prototype 3.png" alt="">
+                        <br>
+                        Ce prototype représente le profil d'un patient. On accède a un profil de patient via son numéro de compte ou via le répétoire de patient dans la bar en haut.
+                        Plusieurs informations sont disponibles sur sont profil notament , son âge , son numéro de compte, son nom , son prénom et la liste de vaccins administrés. 
+                    </li>
+                
+            </ul></section>
+        </div>
+    </main>
+    <footer class="report-footer">
+        <p>
+            <a class="link report-footer__link" href="https://github.com/Oliverkhayat/DM1-VaxTodo-re.git"> Lien vers compte Bitbucket</a></p>
+        <p>
+           <a class="link report-footer__link" href="VPP/Scenario.vpp">Lien vers ressource externe (fichiers VPP)</a></p>
+    </footer>
+
+
+<div id="h10-xray"></div><div id="h10-asin-grabber"></div><div id="h10-demand"></div><div id="h10-inventory"></div>
+<div id="h10-profitability-calculator"></div><div id="h10-review"></div><div id="h10-xray-walmart">
+</div>
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true">
+</grammarly-desktop-integration>
+</html>
